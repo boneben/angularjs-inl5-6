@@ -1,0 +1,26 @@
+<!-- SHOP ROW VIEW-->
+<div class="row mb-4">
+    <div dir-paginate="product in products | orderBy:sortProducts.value | itemsPerPage: rowLimits.value | filter: search" class="card mb-4 border-bottom pb-3 pt-3">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img ng-src="{{ product.image }}" height="" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body product-description">
+                    <h5 class="card-title">{{ product.manufacture }} {{ product.productname }}</h5>
+                    <p class="card-text">
+                        {{ product.description }}
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <p class="font-color-orange">{{ product.price | currency: "SEK " }}</p>
+                        <div class="stars-outer">
+                            <div class="stars-inner" ng-style="{ 'width': rating(product.rating) }"></div>
+                        </div>
+                    </div>
+                    <small class="text-muted"><p>Category: {{ product.category }}</p></small>
+                    <button class="btn btn-sm btn-secondary addtocart-button" ng-click="addItem(product)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

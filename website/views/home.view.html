@@ -1,0 +1,9 @@
+<div class="text-center">
+    <h4 class="text-uppercase">Hi {{vm.user[0].firstname}} {{vm.user[0].lastname}}!</h4>
+    <h5>Your account information below:</h5>
+    <p>EMAIL: {{vm.user[0].email}}</p>
+    <p>ID#: {{vm.user[0]._id}}</p>
+    <a href="#!/login" class="btn btn-custom btn-outline-dark px-4">Logout</a>
+    <a href="" ng-click="vm.deleteUser(vm.user[0]._id)" class="btn btn-danger btn-custom text-white px-4">Delete Account</a> 
+</div>
+

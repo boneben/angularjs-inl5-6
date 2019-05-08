@@ -1,0 +1,10 @@
+{
+    "env": {
+        "SERVER_HOST": "localhost",
+        "SERVER_PORT": 5000,
+
+        "MONGODB": "mongodb://localhost:27017/webshop",
+        "PRIVATE_SECRET_KEY": "ecutbildning"
+
+    }
+}
